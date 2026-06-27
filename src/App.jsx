@@ -1,0 +1,29 @@
+import Header from './components/Header'
+import Hero from './components/Hero'
+import Screenshots from './components/Screenshots'
+import Specialties from './components/Specialties'
+import Features from './components/Features'
+import HowItWorks from './components/HowItWorks'
+import Profiles from './components/Profiles'
+import Security from './components/Security'
+import CTA from './components/CTA'
+import Footer from './components/Footer'
+
+export default function App() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Screenshots />
+        <Specialties />
+        <Features />
+        <HowItWorks />
+        <Profiles />
+        <Security />
+        <CTA />
+      </main>
+      <Footer />
+    </>
+  )
+}
