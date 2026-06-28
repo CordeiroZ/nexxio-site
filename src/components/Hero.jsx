@@ -1,9 +1,10 @@
 import './Hero.css'
 
 const WA_NUMBER = '5511999999999'
+const DEMO_URL  = 'https://demo.nexxiomed.com.br'
 
 export default function Hero() {
-  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Clinic%21`
+  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Med%21`
 
   return (
     <section className="hero" id="top">
@@ -28,17 +29,28 @@ export default function Hero() {
             e acesso seguro do paciente, em conformidade com a LGPD.
           </p>
 
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp hero__cta"
-          >
-            <WhatsAppIcon />
-            Agendar uma demo gratuita
-          </a>
+          <div className="hero__cta-group">
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary hero__cta"
+            >
+              <PlayIcon />
+              Testar sistema agora
+            </a>
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp hero__cta"
+            >
+              <WhatsAppIcon />
+              Falar no WhatsApp
+            </a>
+          </div>
 
-          <p className="hero__cta-note">Sem compromisso · Respondemos em até 1h útil</p>
+          <p className="hero__cta-note">Acesso imediato · Dados fictícios · Sem cadastro</p>
         </div>
 
         {/* Right: UI mockup */}
@@ -124,6 +136,14 @@ export default function Hero() {
         </div>
       </div>
     </section>
+  )
+}
+
+function PlayIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <polygon points="5 3 19 12 5 21 5 3"/>
+    </svg>
   )
 }
 

@@ -93,13 +93,20 @@
 .specialty-pill--uro    { background: rgba(16,185,129,0.1);  color: #6ee7b7; border-color: rgba(16,185,129,0.25); }
 
 
+.hero__cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
 .hero__cta {
   padding: 15px 28px !important;
   font-size: 15px !important;
   border-radius: 14px !important;
   width: 100%;
   justify-content: center;
-  margin-bottom: 12px;
 }
 
 .hero__cta-note {

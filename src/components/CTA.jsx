@@ -1,9 +1,10 @@
 import './CTA.css'
 
 const WA_NUMBER = '5511999999999'
+const DEMO_URL  = 'https://demo.nexxiomed.com.br'
 
 export default function CTA() {
-  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Clinic%21`
+  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Med%21`
 
   return (
     <section className="cta-section section">
@@ -15,10 +16,17 @@ export default function CTA() {
             Modernize a gestão<br />da sua clínica hoje
           </h2>
           <p className="cta-box__subtitle">
-            Agende uma demonstração gratuita e veja o Nexxio Med funcionando
-            com os dados reais do seu fluxo clínico.
+            Teste agora mesmo sem cadastro, ou agende uma demonstração com dados reais do seu fluxo clínico.
           </p>
           <div className="cta-box__actions">
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary cta-box__btn"
+            >
+              ▶ Testar sistema agora
+            </a>
             <a
               href={waLink}
               target="_blank"
@@ -26,11 +34,11 @@ export default function CTA() {
               className="btn-whatsapp cta-box__btn"
             >
               <WhatsAppIcon />
-              Agendar demo pelo WhatsApp
+              Falar no WhatsApp
             </a>
           </div>
           <p className="cta-box__note">
-            Sem compromisso. Respondemos em até 1 hora útil.
+            Acesso imediato · Dados fictícios · Sem compromisso
           </p>
         </div>
       </div>
