@@ -26,7 +26,10 @@ export default function Header() {
       <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
         <div className="container header__inner">
           <a href="#top" className="header__logo" onClick={close}>
-            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Med" className="header__logo-img" />
+            <span className="header__logo-text">
+              <span className="header__logo-nexxio">Nexxio</span>
+              <span className="header__logo-med"> Med</span>
+            </span>
           </a>
 
           <nav className="header__nav">

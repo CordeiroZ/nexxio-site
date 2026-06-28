@@ -37,6 +37,23 @@
   display: block;
 }
 
+.header__logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  user-select: none;
+}
+
+.header__logo-nexxio {
+  font-weight: 700;
+}
+
+.header__logo-med {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
 /* Desktop nav */
 .header__nav {
   display: flex;

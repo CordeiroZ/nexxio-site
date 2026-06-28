@@ -8,7 +8,10 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <div className="footer__logo">
-            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Med" className="footer__logo-img" />
+            <span className="header__logo-text">
+              <span className="header__logo-nexxio">Nexxio</span>
+              <span className="header__logo-med"> Med</span>
+            </span>
           </div>
           <p className="footer__tagline">
             Laudos endoscópicos digitais para gastroenterologia, ginecologia, ORL e urologia.
