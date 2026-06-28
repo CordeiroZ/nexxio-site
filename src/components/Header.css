@@ -51,7 +51,7 @@
 
 .header__logo-med {
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 /* Desktop nav */
