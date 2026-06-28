@@ -19,14 +19,14 @@ export default function Header() {
   }, [menuOpen])
 
   const close = () => setMenuOpen(false)
-  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Nexxio%20Clinic%21`
+  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Nexxio%20Med%21`
 
   return (
     <>
       <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
         <div className="container header__inner">
           <a href="#top" className="header__logo" onClick={close}>
-            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Clinic" className="header__logo-img" />
+            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Med" className="header__logo-img" />
           </a>
 
           <nav className="header__nav">

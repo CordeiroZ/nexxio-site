@@ -32,7 +32,7 @@ export default function Security() {
             <span className="section-label">Segurança & LGPD</span>
             <h2 className="section-title">Seus dados de saúde protegidos<br />do jeito certo</h2>
             <p className="section-subtitle">
-              Dados médicos exigem cuidado extra. O Nexxio Clinic foi construído com segurança
+              Dados médicos exigem cuidado extra. O Nexxio Med foi construído com segurança
               em cada camada — do banco à interface.
             </p>
           </div>

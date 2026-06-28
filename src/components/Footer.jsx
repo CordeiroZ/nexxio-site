@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <div className="footer__logo">
-            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Clinic" className="footer__logo-img" />
+            <img src="/logo-nexxio-tema-escuro.png" alt="Nexxio Med" className="footer__logo-img" />
           </div>
           <p className="footer__tagline">
             Laudos endoscópicos digitais para gastroenterologia, ginecologia, ORL e urologia.
@@ -32,14 +32,14 @@ export default function Footer() {
             >
               WhatsApp
             </a>
-            <a href="mailto:contato@nexxioclinic.com.br">E-mail</a>
+            <a href="mailto:contato@nexxiomed.com.br">E-mail</a>
           </div>
         </div>
       </div>
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <span>© {year} Nexxio Clinic. Todos os direitos reservados.</span>
+          <span>© {year} Nexxio Med. Todos os direitos reservados.</span>
           <span className="footer__bottom-right">
             Feito com cuidado para clínicas brasileiras.
           </span>

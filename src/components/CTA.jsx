@@ -15,7 +15,7 @@ export default function CTA() {
             Modernize a gestão<br />da sua clínica hoje
           </h2>
           <p className="cta-box__subtitle">
-            Agende uma demonstração gratuita e veja o Nexxio Clinic funcionando
+            Agende uma demonstração gratuita e veja o Nexxio Med funcionando
             com os dados reais do seu fluxo clínico.
           </p>
           <div className="cta-box__actions">
