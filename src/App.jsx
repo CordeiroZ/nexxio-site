@@ -4,6 +4,7 @@ import Savings from './components/Savings'
 import Screenshots from './components/Screenshots'
 import Specialties from './components/Specialties'
 import Features from './components/Features'
+import Customize from './components/Customize'
 import HowItWorks from './components/HowItWorks'
 import Profiles from './components/Profiles'
 import Security from './components/Security'
@@ -20,6 +21,7 @@ export default function App() {
         <Screenshots />
         <Specialties />
         <Features />
+        <Customize />
         <HowItWorks />
         <Profiles />
         <Security />
