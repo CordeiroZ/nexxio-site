@@ -1,26 +1,25 @@
-/* ─── Mobile-first base ─── */
+/* ─── Hero ─── */
 
 .hero {
   position: relative;
-  padding: 120px 0 64px;
+  padding: 120px 0 72px;
   overflow: hidden;
 }
 
 .hero__bg-glow {
   position: absolute;
-  top: -80px;
-  right: -60px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12) 0%, transparent 65%);
+  top: -100px;
+  right: -80px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 65%);
   pointer-events: none;
 }
 
-/* Single column on mobile */
 .hero__inner {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 56px;
 }
 
 /* ── Copy ── */
@@ -31,80 +30,94 @@
   align-items: flex-start;
 }
 
-.hero__badge {
-  display: none;
-}
-
-.badge-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
-  flex-shrink: 0;
-  animation: blink 2.4s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-.hero__title {
-  font-size: 34px;
-  color: var(--text);
-  line-height: 1.15;
-  margin-bottom: 18px;
-  max-width: 520px;
-}
-
-.hero__title em {
-  font-style: italic;
-  color: #93c5fd;
-}
-
-.hero__subtitle {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 32px;
-  max-width: 460px;
-}
-
+/* Specialty pills — uniform */
 .hero__specialties {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 24px;
+  gap: 6px;
+  margin-bottom: 28px;
 }
 
 .specialty-pill {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 4px 11px;
+  padding: 4px 12px;
   border-radius: 100px;
-  border: 1px solid;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(148, 163, 184, 0.06);
+  color: var(--text-muted);
   letter-spacing: 0.02em;
 }
 
-.specialty-pill--gastro { background: rgba(245,158,11,0.1);  color: #fcd34d; border-color: rgba(245,158,11,0.25); }
-.specialty-pill--gine   { background: rgba(236,72,153,0.1);  color: #f9a8d4; border-color: rgba(236,72,153,0.25); }
-.specialty-pill--orl    { background: rgba(59,130,246,0.1);  color: #93c5fd; border-color: rgba(59,130,246,0.25); }
-.specialty-pill--uro    { background: rgba(16,185,129,0.1);  color: #6ee7b7; border-color: rgba(16,185,129,0.25); }
+/* Title */
+.hero__title {
+  font-size: 32px;
+  color: var(--text);
+  line-height: 1.18;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
 
+/* Subtitle */
+.hero__subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
 
+/* "Replaces" row */
+.hero__replaces {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.hero__replaces-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.hero__replaces-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tool-chip {
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(239, 68, 68, 0.07);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  text-decoration: line-through;
+  text-decoration-color: rgba(239, 68, 68, 0.35);
+}
+
+/* CTAs */
 .hero__cta-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .hero__cta {
-  padding: 15px 28px !important;
+  padding: 14px 28px !important;
   font-size: 15px !important;
-  border-radius: 14px !important;
+  border-radius: 12px !important;
   width: 100%;
   justify-content: center;
 }
@@ -127,23 +140,20 @@
   max-width: 360px;
 }
 
-/* Back card — hidden on mobile */
-.mock-card--back {
-  display: none;
-}
+.mock-card--back { display: none; }
 
 /* Toast */
 .mock-toast {
   position: absolute;
-  top: -18px;
+  top: -20px;
   right: 0;
   display: flex;
   align-items: center;
-  gap: 7px;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.22);
   border-radius: 100px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   font-size: 11.5px;
   font-weight: 500;
   color: #6ee7b7;
@@ -167,7 +177,12 @@
   50% { transform: translateY(-5px); }
 }
 
-/* Front card */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Cards */
 .mock-card--front {
   position: relative;
   z-index: 2;
@@ -175,7 +190,7 @@
   border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 18px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.07);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(59, 130, 246, 0.06);
   margin-top: 28px;
 }
 
@@ -187,7 +202,7 @@
 }
 
 .mock-label {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   color: var(--text-faint);
   letter-spacing: 0.05em;
@@ -198,14 +213,14 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   padding: 3px 9px;
   border-radius: 100px;
 }
 
-.mock-badge--green  { background: rgba(16,185,129,0.12); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.25); }
-.mock-badge--purple { background: rgba(139,92,246,0.12);  color: #c4b5fd; border: 1px solid rgba(139,92,246,0.25); }
+.mock-badge--green  { background: rgba(16,185,129,0.1);  color: #6ee7b7; border: 1px solid rgba(16,185,129,0.2); }
+.mock-badge--purple { background: rgba(139,92,246,0.1);  color: #c4b5fd; border: 1px solid rgba(139,92,246,0.2); }
 
 .mock-badge__dot {
   width: 5px;
@@ -218,7 +233,7 @@
 .mock-divider {
   height: 1px;
   background: var(--border);
-  margin: 14px 0;
+  margin: 13px 0;
 }
 
 .mock-patient {
@@ -228,13 +243,13 @@
 }
 
 .mock-avatar {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: #fff;
   flex-shrink: 0;
@@ -249,14 +264,14 @@
 }
 
 .mock-patient-proc {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--text-muted);
   margin-top: 2px;
 }
 
 /* Flow */
 .mock-flow__label {
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 600;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -268,7 +283,7 @@
 .mock-flow__steps {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .mock-step { display: flex; align-items: center; flex: 1; }
@@ -289,7 +304,7 @@
 .mock-step__dot--done {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.35);
 }
 
 .mock-step__line { flex: 1; height: 2px; background: var(--border); }
@@ -298,119 +313,48 @@
 .mock-flow__labels {
   display: flex;
   justify-content: space-between;
-  font-size: 9.5px;
+  font-size: 9px;
   color: var(--text-faint);
 }
 
-/* Card footer */
 .mock-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.mock-footer__meta { font-size: 11px; color: var(--text-faint); }
+.mock-footer__meta { font-size: 10.5px; color: var(--text-faint); }
 
 .mock-footer__btn {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--accent);
   background: var(--accent-subtle);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.18);
   border-radius: 7px;
   padding: 5px 10px;
   cursor: default;
 }
 
-/* ── Before/After compare ── */
-
-.hero__compare {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 28px;
-  width: 100%;
-}
-
-.hero__compare-col {
-  flex: 1;
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.hero__compare-col--before {
-  background: rgba(239, 68, 68, 0.06);
-  border: 1px solid rgba(239, 68, 68, 0.18);
-}
-
-.hero__compare-col--after {
-  background: rgba(16, 185, 129, 0.07);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.hero__compare-label {
-  display: block;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-bottom: 8px;
-}
-
-.hero__compare-col--before .hero__compare-label { color: #fca5a5; }
-.hero__compare-col--after  .hero__compare-label { color: #6ee7b7; }
-
-.hero__compare-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: var(--text-muted);
-}
-
-.hero__compare-col--before li { color: #fca5a5; }
-.hero__compare-col--after  li { color: #6ee7b7; }
-
-.hero__compare-arrow {
-  font-size: 18px;
-  color: var(--text-faint);
-  flex-shrink: 0;
-}
-
-/* savings toast variant */
-.mock-toast--savings {
-  background: rgba(245,158,11,0.12);
-  border-color: rgba(245,158,11,0.3);
-  color: #fcd34d;
-}
-
-.mock-toast__icon { font-size: 14px; }
-
 /* ─── Desktop ─── */
 
 @media (min-width: 900px) {
   .hero {
-    padding: 160px 0 100px;
+    padding: 160px 0 108px;
   }
 
   .hero__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    gap: 72px;
     align-items: center;
   }
 
   .hero__title {
-    font-size: clamp(36px, 4.5vw, 58px);
-  }
-
-  .hero__subtitle {
-    font-size: 16px;
-    max-width: 460px;
+    font-size: clamp(34px, 4vw, 52px);
   }
 
   .hero__cta {
@@ -418,7 +362,11 @@
     justify-content: flex-start;
   }
 
-  /* Show back card on desktop */
+  .hero__cta-group {
+    flex-direction: row;
+    width: auto;
+  }
+
   .mock-card--back {
     display: block;
     position: absolute;
@@ -430,30 +378,18 @@
     border-radius: 16px;
     padding: 16px 18px;
     transform: rotate(2.5deg);
-    opacity: 0.6;
+    opacity: 0.55;
     z-index: 0;
   }
 
-  .mock-card--front {
-    margin-top: 40px;
-    padding: 20px;
-  }
+  .mock-card--front { margin-top: 40px; }
 
-  .hero__mockup {
-    max-width: 400px;
-  }
-
-  .mock-toast {
-    top: -20px;
-    right: -8px;
-    font-size: 12px;
-    padding: 7px 14px;
-  }
+  .hero__mockup { max-width: 400px; }
 
   .hero__bg-glow {
     width: 700px;
     height: 700px;
-    top: -120px;
+    top: -140px;
     right: -100px;
   }
 }

@@ -1,48 +1,76 @@
 /* ── Savings section ── */
 
-.savings {
-  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.03) 40%, transparent 100%);
-}
-
 .savings__header {
   text-align: center;
-  margin-bottom: 52px;
-}
-
-.savings__highlight {
-  color: #fca5a5;
-  font-style: italic;
+  margin-bottom: 48px;
 }
 
 .savings__br { display: none; }
 
+/* ── Stat row ── */
+
+.savings__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.savings__stat {
+  background: var(--bg-card);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.savings__stat-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.savings__stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.savings__stat-sub {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+/* ── Main layout ── */
+
 .savings__layout {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  margin-bottom: 36px;
+  gap: 20px;
 }
 
-/* ── Cost breakdown card ── */
+/* ── Cost card ── */
 
 .savings__cost-card {
-  background: rgba(239, 68, 68, 0.05);
-  border: 1px solid rgba(239, 68, 68, 0.18);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   overflow: hidden;
 }
 
-.savings__cost-header {
-  padding: 14px 20px;
-  border-bottom: 1px solid rgba(239, 68, 68, 0.15);
-}
-
-.savings__cost-badge {
+.savings__cost-title {
+  padding: 16px 20px 14px;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #fca5a5;
+  color: var(--text-faint);
+  border-bottom: 1px solid var(--border);
+  margin: 0;
 }
 
 .savings__cost-list {
@@ -55,182 +83,115 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 11px 20px;
-  border-bottom: 1px solid rgba(239, 68, 68, 0.08);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
   font-size: 13.5px;
   color: var(--text-muted);
 }
 
-.savings__cost-name { flex: 1; }
-
 .savings__cost-val {
   font-weight: 700;
-  color: #fca5a5;
-  min-width: 64px;
-  text-align: right;
+  color: var(--text);
+  white-space: nowrap;
+  margin-left: 16px;
 }
 
-.savings__cost-total {
+.savings__cost-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  background: rgba(239, 68, 68, 0.1);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  color: #fca5a5;
+  color: var(--text);
+  background: rgba(59, 130, 246, 0.05);
 }
 
-.savings__cost-total-val {
-  font-size: 15px;
-  font-weight: 800;
-}
+/* ── Gains column ── */
 
-/* ── Impact column ── */
-
-.savings__impact {
+.savings__gains {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
-/* Math box */
-
-.savings__math-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 24px;
-}
-
-.savings__math-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.savings__math-num {
-  font-size: 28px;
-  font-weight: 800;
-  color: #93c5fd;
-  min-width: 90px;
-  line-height: 1;
-}
-
-.savings__math-num--amber { color: #fcd34d; }
-.savings__math-num--green { color: #6ee7b7; font-size: 22px; }
-
-.savings__math-desc {
-  font-size: 13.5px;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.savings__math-desc span {
-  font-size: 11.5px;
-  color: var(--text-faint);
-}
-
-.savings__math-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 18px 0;
-}
-
-/* Bullets */
-
-.savings__bullets {
-  background: rgba(16, 185, 129, 0.05);
-  border: 1px solid rgba(16, 185, 129, 0.15);
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.savings__bullets-title {
+.savings__gains-title {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #6ee7b7;
-  margin-bottom: 14px;
+  color: var(--text-faint);
+  margin: 0 0 4px;
 }
 
-.savings__bullet {
+.savings__gain {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
 }
 
-.savings__bullet:last-child { margin-bottom: 0; }
-
-.savings__bullet-icon {
-  font-size: 15px;
+.savings__gain-icon {
+  font-size: 16px;
   line-height: 1.4;
   flex-shrink: 0;
 }
 
-.savings__bullet-text {
-  font-size: 13px;
+.savings__gain-text {
+  font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.6;
 }
 
-/* Differentiator banner */
+/* Unique badge */
 
-.savings__differentiator {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.06) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 16px;
-  padding: 22px 24px;
+.savings__unique {
+  padding: 18px 20px;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  margin-top: 4px;
 }
 
-.savings__diff-star {
-  font-size: 22px;
-  color: #fcd34d;
-  flex-shrink: 0;
-  line-height: 1.5;
+.savings__unique-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 100px;
+  padding: 2px 9px;
+  margin-bottom: 10px;
 }
 
-.savings__differentiator p {
-  font-size: 14px;
+.savings__unique p {
+  font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.7;
   margin: 0;
 }
 
-.savings__differentiator strong {
-  color: var(--text);
-}
-
 /* ─── Desktop ─── */
 
 @media (min-width: 900px) {
+  .savings__br { display: block; }
+
+  .savings__stat-num { font-size: 32px; }
+
   .savings__layout {
     flex-direction: row;
     align-items: flex-start;
-    gap: 32px;
+    gap: 24px;
   }
 
   .savings__cost-card {
     flex: 0 0 340px;
-    position: sticky;
-    top: 100px;
   }
 
-  .savings__impact {
-    flex: 1;
-  }
-
-  .savings__br { display: block; }
-
-  .savings__math-num {
-    font-size: 32px;
-    min-width: 110px;
-  }
-
-  .savings__math-num--green { font-size: 26px; }
+  .savings__gains { flex: 1; }
 }
