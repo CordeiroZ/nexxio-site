@@ -54,7 +54,7 @@ export default function Screenshots() {
               <span /><span /><span />
             </div>
             <div className="browser-frame__url">
-              clinixpro-neon.vercel.app
+              app.nexxiomed.com.br
             </div>
           </div>
           <div className="browser-frame__screen">
