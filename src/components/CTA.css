@@ -74,6 +74,10 @@
 
 .cta-box__actions {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 20px;
 }
 
@@ -89,13 +93,28 @@
   position: relative;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
+  .cta-box__actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 639px) {
   .cta-box {
-    padding: 48px 24px;
+    padding: 48px 20px;
   }
 
   .cta-box__btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .cta-stat__divider { display: none; }
+
+  .cta-box__stats {
+    flex-direction: column;
+    gap: 16px;
   }
 }
