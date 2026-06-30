@@ -1,0 +1,236 @@
+/* ── Savings section ── */
+
+.savings {
+  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.03) 40%, transparent 100%);
+}
+
+.savings__header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.savings__highlight {
+  color: #fca5a5;
+  font-style: italic;
+}
+
+.savings__br { display: none; }
+
+.savings__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+/* ── Cost breakdown card ── */
+
+.savings__cost-card {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.savings__cost-header {
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.savings__cost-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #fca5a5;
+}
+
+.savings__cost-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.savings__cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 20px;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.08);
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.savings__cost-name { flex: 1; }
+
+.savings__cost-val {
+  font-weight: 700;
+  color: #fca5a5;
+  min-width: 64px;
+  text-align: right;
+}
+
+.savings__cost-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(239, 68, 68, 0.1);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fca5a5;
+}
+
+.savings__cost-total-val {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* ── Impact column ── */
+
+.savings__impact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Math box */
+
+.savings__math-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.savings__math-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.savings__math-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: #93c5fd;
+  min-width: 90px;
+  line-height: 1;
+}
+
+.savings__math-num--amber { color: #fcd34d; }
+.savings__math-num--green { color: #6ee7b7; font-size: 22px; }
+
+.savings__math-desc {
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.savings__math-desc span {
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.savings__math-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 18px 0;
+}
+
+/* Bullets */
+
+.savings__bullets {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.savings__bullets-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6ee7b7;
+  margin-bottom: 14px;
+}
+
+.savings__bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.savings__bullet:last-child { margin-bottom: 0; }
+
+.savings__bullet-icon {
+  font-size: 15px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.savings__bullet-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Differentiator banner */
+
+.savings__differentiator {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.06) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  padding: 22px 24px;
+}
+
+.savings__diff-star {
+  font-size: 22px;
+  color: #fcd34d;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.savings__differentiator p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.savings__differentiator strong {
+  color: var(--text);
+}
+
+/* ─── Desktop ─── */
+
+@media (min-width: 900px) {
+  .savings__layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .savings__cost-card {
+    flex: 0 0 340px;
+    position: sticky;
+    top: 100px;
+  }
+
+  .savings__impact {
+    flex: 1;
+  }
+
+  .savings__br { display: block; }
+
+  .savings__math-num {
+    font-size: 32px;
+    min-width: 110px;
+  }
+
+  .savings__math-num--green { font-size: 26px; }
+}

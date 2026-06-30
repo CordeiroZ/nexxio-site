@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Savings from './components/Savings'
 import Screenshots from './components/Screenshots'
 import Specialties from './components/Specialties'
 import Features from './components/Features'
@@ -15,6 +16,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Savings />
         <Screenshots />
         <Specialties />
         <Features />

@@ -4,7 +4,7 @@ const WA_NUMBER = '5511999999999'
 const DEMO_URL  = 'https://demo.nexxiomed.com.br'
 
 export default function Hero() {
-  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Med%21`
+  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demo%20do%20Nexxio%20Med%21`
 
   return (
     <section className="hero" id="top">
@@ -14,53 +14,67 @@ export default function Hero() {
         {/* Left: copy */}
         <div className="hero__left">
           <div className="hero__specialties">
-            <span className="specialty-pill specialty-pill--gastro">Gastroenterologia</span>
-            <span className="specialty-pill specialty-pill--gine">Ginecologia</span>
-            <span className="specialty-pill specialty-pill--orl">ORL</span>
-            <span className="specialty-pill specialty-pill--uro">Urologia</span>
+            <span className="specialty-pill specialty-pill--gine">Colposcopia</span>
+            <span className="specialty-pill specialty-pill--gastro">Histeroscopia</span>
+            <span className="specialty-pill specialty-pill--uro">CAF</span>
+            <span className="specialty-pill specialty-pill--orl">Endoscopia</span>
           </div>
 
           <h1 className="hero__title">
-            Do exame ao laudo <em>online</em> — o paciente acessa pelo celular, sem papel.
+            Cada laudo em papel custa até <em>R$ 8</em> e rouba <em>20 minutos</em> do médico.
           </h1>
 
           <p className="hero__subtitle">
-            Vídeo integrado ao laudo, documentação padronizada por procedimento
-            e acesso seguro do paciente, em conformidade com a LGPD.
+            O Nexxio substitui papel, Word e WhatsApp por um sistema completo — laudo
+            estruturado, fotos do exame integradas e entrega digital ao paciente.
+            Funciona no celular. Sem instalar nada.
           </p>
 
+          {/* Before/After strip */}
+          <div className="hero__compare">
+            <div className="hero__compare-col hero__compare-col--before">
+              <span className="hero__compare-label">Hoje</span>
+              <ul>
+                <li>📄 Papel + foto + capa = R$ 5–8/laudo</li>
+                <li>⏱ 20 min digitando no Word</li>
+                <li>📱 Entrega por WhatsApp ou impressão</li>
+                <li>💾 Arquivo perdido no HD da clínica</li>
+              </ul>
+            </div>
+            <div className="hero__compare-arrow">→</div>
+            <div className="hero__compare-col hero__compare-col--after">
+              <span className="hero__compare-label">Com Nexxio</span>
+              <ul>
+                <li>✅ Custo zero de impressão</li>
+                <li>✅ 3 min com template estruturado</li>
+                <li>✅ Paciente acessa pelo celular</li>
+                <li>✅ Nuvem — nunca perde laudo</li>
+              </ul>
+            </div>
+          </div>
+
           <div className="hero__cta-group">
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary hero__cta"
-            >
+            <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-primary hero__cta">
               <PlayIcon />
-              Testar sistema agora
+              Testar o sistema agora
             </a>
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp hero__cta"
-            >
+            <a href={waLink} target="_blank" rel="noopener noreferrer" className="btn-whatsapp hero__cta">
               <WhatsAppIcon />
               Falar no WhatsApp
             </a>
           </div>
 
-          <p className="hero__cta-note">Acesso imediato · Dados fictícios · Sem cadastro</p>
+          <p className="hero__cta-note">Acesso imediato · Dados fictícios · Sem cadastro · Sem cartão</p>
         </div>
 
         {/* Right: UI mockup */}
         <div className="hero__right">
           <div className="hero__mockup">
 
-            {/* Floating notification */}
-            <div className="mock-toast">
-              <span className="mock-toast__dot" />
-              Laudo liberado — Ana C. Ferreira
+            {/* Savings toast */}
+            <div className="mock-toast mock-toast--savings">
+              <span className="mock-toast__icon">💰</span>
+              R$ 8 economizados — laudo de Ana C. gerado
             </div>
 
             {/* Back card */}
@@ -88,10 +102,10 @@ export default function Hero() {
               <div className="mock-divider" />
 
               <div className="mock-patient">
-                <div className="mock-avatar" style={{ background: '#0ea5e9' }}>CM</div>
+                <div className="mock-avatar" style={{ background: '#0ea5e9' }}>AP</div>
                 <div>
-                  <div className="mock-patient-name">Carlos R. Mendes</div>
-                  <div className="mock-patient-proc">Colonoscopia Total c/ Polipectomia</div>
+                  <div className="mock-patient-name">Ana P. Ferreira</div>
+                  <div className="mock-patient-proc">Videohisteroscopia Diagnóstica</div>
                 </div>
               </div>
 
@@ -102,9 +116,9 @@ export default function Hero() {
                 <div className="mock-flow__steps">
                   {[
                     { label: 'Anamnese', done: true },
-                    { label: 'Exame', done: true },
-                    { label: 'Liberação', done: true },
-                    { label: 'Publicado', done: true },
+                    { label: 'Fotos', done: true },
+                    { label: 'Laudo', done: true },
+                    { label: 'Online', done: true },
                   ].map((s, i) => (
                     <div key={i} className="mock-step">
                       <div className={`mock-step__dot${s.done ? ' mock-step__dot--done' : ''}`}>
@@ -116,16 +130,16 @@ export default function Hero() {
                 </div>
                 <div className="mock-flow__labels">
                   <span>Anamnese</span>
-                  <span>Exame</span>
-                  <span>Liberação</span>
-                  <span>Publicado</span>
+                  <span>Fotos</span>
+                  <span>Laudo</span>
+                  <span>Online</span>
                 </div>
               </div>
 
               <div className="mock-divider" />
 
               <div className="mock-footer">
-                <span className="mock-footer__meta">Dr. Eduardo Barros · hoje, 14h32</span>
+                <span className="mock-footer__meta">Dra. Camila Rocha · hoje, 14h32</span>
                 <button className="mock-footer__btn">
                   <PdfIcon /> Ver PDF
                 </button>

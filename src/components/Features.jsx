@@ -3,33 +3,33 @@ import './Features.css'
 const features = [
   {
     icon: <FileTextIcon />,
-    title: 'Laudos médicos digitais',
-    desc: 'Fluxo completo com múltiplos status — da anamnese à liberação. Cada etapa rastreada e registrada.',
+    title: 'Template estruturado por procedimento',
+    desc: 'O médico marca checkboxes e escolhe opções — sem digitar texto livre. Laudo completo em 3 minutos, com padrão clínico garantido.',
   },
   {
     icon: <CameraIcon />,
-    title: 'Laudo com vídeo endoscópico',
-    desc: 'Captura de imagens e gravação de vídeo do exame integrada diretamente ao laudo — sem arquivos soltos.',
+    title: 'Câmera integrada — diferencial único',
+    desc: 'O técnico captura as fotos do exame direto no sistema. Elas aparecem automaticamente no laudo certo, esperando o médico — sem pendrive, sem transferência.',
   },
   {
     icon: <UserCheckIcon />,
-    title: 'Portal do paciente',
-    desc: 'Acesso seguro pelo CPF e data de nascimento — sem necessidade de senha ou cadastro extra.',
+    title: 'Paciente acessa pelo celular',
+    desc: 'Resultado disponível online pelo CPF + data de nascimento. Sem imprimir, sem gravar CD, sem o paciente ligar para a recepção.',
   },
   {
     icon: <PdfIcon />,
-    title: 'Geração de PDF',
-    desc: 'Laudos prontos para impressão ou envio digital, com layout profissional gerado na hora.',
+    title: 'PDF profissional com 1 clique',
+    desc: 'Logo da clínica, assinatura do médico, fotos do exame — tudo formatado automaticamente. O que antes levava 20 minutos agora leva 3.',
   },
   {
     icon: <UsersIcon />,
-    title: 'Controle de usuários',
-    desc: 'Perfis por função com permissões distintas: admin, médico, laudista e recepcionista.',
+    title: 'Médico acessa de qualquer lugar',
+    desc: 'Funciona no celular, tablet ou notebook. Sem instalar software, sem VPN, sem precisar estar na clínica para revisar e liberar laudos.',
   },
   {
     icon: <ShieldIcon />,
-    title: 'Logs de auditoria',
-    desc: 'Rastreabilidade completa de todas as ações no sistema — quem acessou, editou e liberou cada laudo.',
+    title: 'Rastreabilidade completa',
+    desc: 'Cada ação registrada: quem abriu, editou e liberou cada laudo, com data e hora. Auditoria completa para fins legais e clínicos.',
   },
 ]
 
@@ -41,8 +41,8 @@ export default function Features() {
           <span className="section-label">Funcionalidades</span>
           <h2 className="section-title">Tudo que sua clínica precisa,<br />em uma só plataforma</h2>
           <p className="section-subtitle">
-            Desenvolvido para o fluxo real de especialidades endoscópicas —
-            do agendamento ao laudo com vídeo arquivado.
+            Cada funcionalidade resolve um problema real do dia a dia clínico —
+            nenhuma tela desnecessária, nenhum passo a mais.
           </p>
         </div>
 

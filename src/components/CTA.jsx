@@ -4,41 +4,55 @@ const WA_NUMBER = '5511999999999'
 const DEMO_URL  = 'https://demo.nexxiomed.com.br'
 
 export default function CTA() {
-  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demo%20do%20Nexxio%20Med%21`
+  const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demo%20do%20Nexxio%20Med%21`
 
   return (
     <section className="cta-section section">
       <div className="container">
         <div className="cta-box">
           <div className="cta-box__glow" />
+
           <span className="section-label">Pronto para começar?</span>
+
           <h2 className="cta-box__title">
-            Modernize a gestão<br />da sua clínica hoje
+            Teste em 5 minutos.<br />Sem cadastro. Sem cartão.
           </h2>
+
           <p className="cta-box__subtitle">
-            Teste agora mesmo sem cadastro, ou agende uma demonstração com dados reais do seu fluxo clínico.
+            Veja o laudo sair em PDF — com fotos, assinatura e logo da clínica —
+            da mesma forma que funcionaria com seus pacientes reais.
+            Se não fizer sentido, você fecha e vai embora. Sem custo, sem compromisso.
           </p>
+
+          <div className="cta-box__stats">
+            <div className="cta-stat">
+              <span className="cta-stat__num">3 min</span>
+              <span className="cta-stat__label">por laudo com template</span>
+            </div>
+            <div className="cta-stat__divider" />
+            <div className="cta-stat">
+              <span className="cta-stat__num">R$ 0</span>
+              <span className="cta-stat__label">de papel por paciente</span>
+            </div>
+            <div className="cta-stat__divider" />
+            <div className="cta-stat">
+              <span className="cta-stat__num">Dia 1</span>
+              <span className="cta-stat__label">já está funcionando</span>
+            </div>
+          </div>
+
           <div className="cta-box__actions">
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary cta-box__btn"
-            >
-              ▶ Testar sistema agora
+            <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn-primary cta-box__btn">
+              ▶ Testar o sistema agora
             </a>
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp cta-box__btn"
-            >
+            <a href={waLink} target="_blank" rel="noopener noreferrer" className="btn-whatsapp cta-box__btn">
               <WhatsAppIcon />
-              Falar no WhatsApp
+              Conversar no WhatsApp
             </a>
           </div>
+
           <p className="cta-box__note">
-            Acesso imediato · Dados fictícios · Sem compromisso
+            Acesso imediato com dados fictícios · Sem instalar nada · Funciona no celular
           </p>
         </div>
       </div>
