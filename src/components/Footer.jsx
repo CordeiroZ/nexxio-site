@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="footer__col">
             <span className="footer__col-title">Contato</span>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5521984189452"
               target="_blank"
               rel="noopener noreferrer"
             >

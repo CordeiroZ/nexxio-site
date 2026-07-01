@@ -1,6 +1,6 @@
 import './CTA.css'
 
-const WA_NUMBER = '5511999999999'
+const WA_NUMBER = '5521984189452'
 const DEMO_URL  = 'https://app.nexxiomed.com.br'
 
 export default function CTA() {

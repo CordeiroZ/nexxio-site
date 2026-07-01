@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Header.css'
 
-const WA_NUMBER = '5511999999999' // substitua pelo número real
+const WA_NUMBER = '5521984189452' // substitua pelo número real
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
