@@ -1,7 +1,7 @@
 import './Hero.css'
 
 const WA_NUMBER = '5511999999999'
-const DEMO_URL  = 'https://demo.nexxiomed.com.br'
+const DEMO_URL  = 'https://app.nexxiomed.com.br'
 
 export default function Hero() {
   const waLink = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1%2C%20quero%20ver%20uma%20demo%20do%20Nexxio%20Med%21`
