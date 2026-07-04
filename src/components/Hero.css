@@ -72,9 +72,10 @@
 .hero__replaces {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 28px;
   flex-wrap: wrap;
+  row-gap: 5px;
 }
 
 .hero__replaces-label {
@@ -87,9 +88,7 @@
 }
 
 .hero__replaces-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  display: contents;
 }
 
 .tool-chip {
