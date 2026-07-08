@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './Header.css'
 
-const WA_NUMBER = '5521984189452' // substitua pelo número real
+const WA_NUMBER = '5521984189452'
+const DEMO_URL  = 'https://app.nexxiomed.com.br'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -37,13 +38,21 @@ export default function Header() {
             <a href="#fluxo">Como funciona</a>
             <a href="#seguranca">Segurança</a>
             <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary header__cta-demo"
+            >
+              Testar agora
+            </a>
+            <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp header__cta"
             >
               <WhatsAppIcon />
-              Falar no WhatsApp
+              WhatsApp
             </a>
           </nav>
 
@@ -71,16 +80,27 @@ export default function Header() {
           <a href="#fluxo" onClick={close}>Como funciona</a>
           <a href="#seguranca" onClick={close}>Segurança</a>
         </nav>
-        <a
-          href={waLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-whatsapp mobile-drawer__cta"
-          onClick={close}
-        >
-          <WhatsAppIcon />
-          Falar no WhatsApp
-        </a>
+        <div className="mobile-drawer__actions">
+          <a
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mobile-drawer__cta"
+            onClick={close}
+          >
+            Testar agora
+          </a>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp mobile-drawer__cta"
+            onClick={close}
+          >
+            <WhatsAppIcon />
+            Falar no WhatsApp
+          </a>
+        </div>
       </div>
     </>
   )

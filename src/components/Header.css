@@ -77,6 +77,12 @@
   font-size: 14px !important;
 }
 
+.header__cta-demo {
+  padding: 9px 18px !important;
+  font-size: 13px !important;
+  border-radius: 8px !important;
+}
+
 /* Burger */
 .header__burger {
   display: none;
@@ -173,6 +179,12 @@
 
 .mobile-drawer__nav a:hover {
   color: var(--text);
+}
+
+.mobile-drawer__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .mobile-drawer__cta {
