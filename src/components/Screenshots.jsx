@@ -22,6 +22,10 @@ const tabs = [
   },
 ]
 
+function PlayIcon() {
+  return <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+}
+
 export default function Screenshots() {
   const [active, setActive] = useState(0)
   const tab = tabs[active]
@@ -47,6 +51,13 @@ export default function Screenshots() {
         </div>
 
         <p className="screenshots__desc">{tab.desc}</p>
+
+        <div className="screenshots__cta">
+          <a href="https://app.nexxiomed.com.br" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <PlayIcon /> Testar o sistema agora
+          </a>
+          <span className="screenshots__cta-note">Acesso imediato · Dados fictícios · Sem cadastro</span>
+        </div>
 
         <div className="browser-frame">
           <div className="browser-frame__bar">

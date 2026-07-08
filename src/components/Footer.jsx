@@ -37,6 +37,11 @@ export default function Footer() {
             </a>
             <a href="mailto:contato@nexxiomed.com.br">E-mail</a>
           </div>
+          <div className="footer__col">
+            <span className="footer__col-title">Legal</span>
+            <a href="https://app.nexxiomed.com.br/privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+            <a href="mailto:contato@nexxiomed.com.br">Solicitações LGPD</a>
+          </div>
         </div>
       </div>
 
